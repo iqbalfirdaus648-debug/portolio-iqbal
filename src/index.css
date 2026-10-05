@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+/* Jika Anda menggunakan Tailwind v3, gunakan ini: */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Jika Anda menggunakan Tailwind v4, gunakan ini sebagai gantinya: */
+/* @import "tailwindcss"; */
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Pattern Background Anti-AI Slop */
+.bg-grid-pattern {
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 24px 24px;
+}

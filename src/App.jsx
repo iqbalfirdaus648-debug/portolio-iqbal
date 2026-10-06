@@ -25,23 +25,24 @@ const services = [
 const projects = [
   {
     title: "Dashboard Monitoring Piutang & Tracker Penagihan",
-    org: "Proyek Portofolio — Excel",
+    org: "Proyek Portofolio — Excel (Data Sintetis)",
     featured: true,
     isPiutang: true,
     link: "/portofolio_piutang.xlsx",
-    desc: "Mengolah 9.071 baris data penjualan (2.480 faktur, 305 customer) menjadi aging report dengan SUMIFS, INDEX/MATCH, dan Conditional Formatting. Dilengkapi tracker penagihan harian, log janji bayar, dan KPI dashboard.",
+    desc: "Mengolah 5.997 baris data penjualan sintetis (1.750 faktur, 125 customer) menjadi aging report dengan SUMIFS, INDEX/MATCH, dan Conditional Formatting. Total penjualan ±Rp18,55 miliar dengan piutang outstanding Rp1,21 miliar (38,9% overdue). Dilengkapi tracker penagihan harian, log janji bayar, dan KPI dashboard.",
     tags: ["Excel", "SUMIFS", "INDEX/MATCH", "Aging Report", "Dashboard KPI"],
     kpis: [
-      { label: "Baris Data Diolah", value: "9.071", sub: "data penjualan" },
-      { label: "Total Faktur", value: "2.480", sub: "invoice" },
-      { label: "Customer Aktif", value: "305", sub: "outlet" },
-      { label: "Kategori Aging", value: "5", sub: "bucket umur piutang" },
+      { label: "Baris Data Diolah", value: "5.997", sub: "data penjualan" },
+      { label: "Total Faktur", value: "1.750", sub: "invoice" },
+      { label: "Customer Aktif", value: "125", sub: "outlet" },
+      { label: "Piutang Outstanding", value: "Rp1,21 M", sub: "38,9% overdue" },
     ],
     highlights: [
       "Aging Report 5 bucket: Belum JT, 1-30, 31-60, 61-90, 90+ hari",
       "KPI Dashboard: Total Piutang, % Overdue, DSO, Top 10 Customer",
       "Tracker Penagihan: daftar kunjungan, tukar faktur, log janji bayar",
       "Piutang per Salesman untuk monitoring performa tim",
+      "Data sintetis (fiktif) — dibuat khusus untuk keperluan portofolio",
     ],
   },
   {

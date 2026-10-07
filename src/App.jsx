@@ -63,8 +63,8 @@ const projects = [
     title: "Dashboard Business Intelligence Transaksi",
     org: "PT Duta Buana Perkasa, 2024",
     featured: false,
-    desc: "Analisis data transaksi penjualan & perancangan dashboard Business Intelligence dengan Google Looker Studio untuk mendukung keputusan manajemen.",
-    tags: ["Looker Studio", "SQL", "Data Visualization"],
+    desc: "Analisis data transaksi penjualan & perancangan dashboard Business Intelligence dengan Power BI dan Google Looker Studio untuk mendukung keputusan manajemen.",
+    tags: ["Power BI", "Google Looker Studio", "SQL", "Data Visualization"],
   },
   {
     title: "Website Kasir Warung Sembako Ibu Novi",
@@ -85,7 +85,8 @@ const projects = [
 const skillGroups = [
   { label: "Data & Engineering", items: ["SQL", "PostgreSQL", "Python", "Pandas", "ETL"] },
   { label: "Machine Learning & AI", items: ["scikit-learn", "TensorFlow/Keras", "LSTM", "SARIMAX", "C4.5"] },
-  { label: "BI, Visualisasi & Excel", items: ["Excel (SUMIFS, INDEX/MATCH)", "Pivot Table", "Looker Studio", "Recharts", "Dashboard KPI"] },
+  { label: "BI, Visualisasi & Excel", items: ["Excel (SUMIFS, INDEX/MATCH)", "Pivot Table", "Power BI", "Google Looker Studio", "Recharts", "Dashboard KPI"] },
+  { label: "UI/UX & Design", items: ["Figma", "Wireframing", "Prototyping", "User Flow", "Design System"] },
   { label: "Accounting & Administrasi", items: ["Analisis Piutang", "Aging Report", "Rekonsiliasi Data", "Pelaporan Keuangan", "Administrasi Dokumen"] },
 ];
 

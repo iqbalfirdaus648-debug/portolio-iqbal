@@ -24,6 +24,21 @@ const services = [
 
 const projects = [
   {
+    title: "Pertamina Distributor Monitoring System",
+    org: "AI-Powered Sales Intelligence Platform | Solo Developer · 2025 – 2026",
+    featured: true,
+    desc: "Platform monitoring distributor pelumas end-to-end yang memproses 17.588 transaksi riil (730 hari) dengan machine learning, computer vision, dan real-time notification dalam satu aplikasi.",
+    tags: ["FastAPI", "React 18", "PostgreSQL", "TensorFlow", "EasyOCR", "WebSocket", "JWT"],
+    highlights: [
+      "Membangun platform monitoring distributor pelumas end-to-end dengan FastAPI + React + PostgreSQL, memproses 17.588 transaksi riil (730 hari)",
+      "Mengembangkan LSTM forecasting untuk prediksi penjualan dengan MAPE turun dari 70% → 46% via log transform, arsitektur 3-layer, dan Huber loss",
+      "Mengimplementasikan OCR product detection (EasyOCR + custom fuzzy scoring) untuk identifikasi produk dari foto label",
+      "Merancang Content-Based Filtering (TF-IDF + Cosine) untuk rekomendasi produk per pelanggan",
+      "Membangun dual authentication (JWT + API Key) dengan RBAC, bcrypt hashing, dan audit trail",
+      "Mengintegrasikan real-time WebSocket notification untuk multi-user sync",
+    ],
+  },
+  {
     title: "Dashboard Monitoring Piutang & Tracker Penagihan",
     org: "Proyek Portofolio — Excel (Data Sintetis)",
     featured: true,
@@ -46,11 +61,18 @@ const projects = [
     ],
   },
   {
-    title: "Sistem Monitoring & Forecasting Distributor Pertamina",
-    org: "PT Duta Buana Perkasa",
+    title: "Perancangan UI/UX Hybrid Learning Management System",
+    org: "Proyek Desain — Figma",
     featured: false,
-    desc: "Sistem end-to-end: data warehouse PostgreSQL, model forecasting LSTM & SARIMAX untuk prediksi penjualan harian, backend FastAPI, dan dashboard React real-time.",
-    tags: ["PostgreSQL", "TensorFlow", "FastAPI", "React"],
+    desc: "Merancang UI/UX platform Hybrid Learning Management System dengan fitur AI untuk penilaian otomatis (auto-grading) jawaban peserta. Desain mencakup 4 role pengguna dengan alur kerja dan kebutuhan yang berbeda dalam satu ekosistem pembelajaran.",
+    tags: ["Figma", "UI/UX", "Wireframing", "Prototyping", "AI Auto-Grading"],
+    highlights: [
+      "Merancang UI/UX platform Hybrid LMS untuk 4 role pengguna: Admin Kursus, Pengajar, Asisten, dan Peserta",
+      "Mengintegrasikan fitur AI untuk penilaian otomatis (auto-grading) jawaban peserta",
+      "Membuat wireframe, user flow, dan high-fidelity prototype interaktif di Figma",
+      "Merancang design system dan komponen reusable untuk konsistensi antar halaman",
+      "Melakukan usability testing dan iterasi desain berdasarkan feedback pengguna",
+    ],
   },
   {
     title: "Prediksi Produk Pelumas Terlaris",
@@ -84,7 +106,8 @@ const projects = [
 
 const skillGroups = [
   { label: "Data & Engineering", items: ["SQL", "PostgreSQL", "Python", "Pandas", "ETL"] },
-  { label: "Machine Learning & AI", items: ["scikit-learn", "TensorFlow/Keras", "LSTM", "SARIMAX", "C4.5"] },
+  { label: "Machine Learning & AI", items: ["scikit-learn", "TensorFlow/Keras", "LSTM", "SARIMAX", "C4.5", "TF-IDF", "Cosine Similarity", "EasyOCR", "Huber Loss"] },
+  { label: "Backend & Frontend", items: ["FastAPI", "REST API", "React 18", "WebSocket", "JWT", "RBAC", "bcrypt"] },
   { label: "BI, Visualisasi & Excel", items: ["Excel (SUMIFS, INDEX/MATCH)", "Pivot Table", "Power BI", "Google Looker Studio", "Recharts", "Dashboard KPI"] },
   { label: "UI/UX & Design", items: ["Figma", "Wireframing", "Prototyping", "User Flow", "Design System"] },
   { label: "Accounting & Administrasi", items: ["Analisis Piutang", "Aging Report", "Rekonsiliasi Data", "Pelaporan Keuangan", "Administrasi Dokumen"] },
@@ -393,7 +416,7 @@ export default function App() {
                 >
                   <p className="text-xs sm:text-sm font-medium text-slate-600 mb-1">Proyek Selesai</p>
                   <p className="text-5xl sm:text-6xl font-extrabold text-slate-900 leading-none">
-                    6<span className="text-blue-600">+</span>
+                    7<span className="text-blue-600">+</span>
                   </p>
                 </motion.div>
 
@@ -504,9 +527,11 @@ export default function App() {
                     </div>
                   )}
 
-                  {p.isPiutang && p.highlights && (
+                  {p.highlights && (
                     <div className="bg-blue-50/50 border border-blue-100 rounded-2xl p-5 mb-6">
-                      <p className="text-xs font-bold text-blue-700 uppercase tracking-wider mb-3">🔍 Hasil & Fitur Dashboard</p>
+                      <p className="text-xs font-bold text-blue-700 uppercase tracking-wider mb-3">
+                        {p.isPiutang ? "🔍 Hasil & Fitur Dashboard" : "🔍 Fitur Utama"}
+                      </p>
                       <ul className="space-y-2">
                         {p.highlights.map((h, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-slate-700">

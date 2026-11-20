@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Mail, Github, Linkedin, BarChart3, Brain, Database, Menu, X, ArrowRight, Sparkles, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import profilePhoto from "./assets/profile.png";
+import ImageGallery from "./ImageGallery";
 
 const navLinks = [
   { id: "services", label: "Services" },
@@ -27,6 +28,13 @@ const projects = [
     title: "Pertamina Distributor Monitoring System",
     org: "AI-Powered Sales Intelligence Platform | Solo Developer · 2025 – 2026",
     featured: true,
+    images: [
+      "/projects/Screenshot%202026-11-20%20204154.png",
+      "/projects/Screenshot%202026-11-20%20204205.png",
+      "/projects/Screenshot%202026-11-20%20204237.png",
+      "/projects/Screenshot%202026-11-20%20204253.png",
+      "/projects/Screenshot%202026-11-20%20204351.png",
+    ],
     desc: "Platform monitoring distributor pelumas end-to-end yang memproses 17.588 transaksi riil (730 hari) dengan machine learning, computer vision, dan real-time notification dalam satu aplikasi.",
     tags: ["FastAPI", "React 18", "PostgreSQL", "TensorFlow", "EasyOCR", "WebSocket", "JWT"],
     highlights: [
@@ -64,6 +72,14 @@ const projects = [
     title: "Perancangan UI/UX Hybrid Learning Management System",
     org: "Proyek Desain — Figma",
     featured: false,
+    images: [
+      "/projects/1_login-admin_frame.png",
+      "/projects/2_course-map-admin_frame.png",
+      "/projects/3_login-asisten_frame.png",
+      "/projects/4_koreksi-asisten_frame.png",
+      "/projects/5_landing-page_frame.png",
+      "/projects/6_kursus-peserta_frame.png",
+    ],
     desc: "Merancang UI/UX platform Hybrid Learning Management System dengan fitur AI untuk penilaian otomatis (auto-grading) jawaban peserta. Desain mencakup 4 role pengguna dengan alur kerja dan kebutuhan yang berbeda dalam satu ekosistem pembelajaran.",
     tags: ["Figma", "UI/UX", "Wireframing", "Prototyping", "AI Auto-Grading"],
     highlights: [
@@ -99,6 +115,11 @@ const projects = [
     title: "Dashboard Segmentasi Produk & Customer",
     org: "RFM, K-Means, Apriori",
     featured: false,
+    images: [
+      "/projects/Screenshot%202026-11-20%20210121.png",
+      "/projects/Screenshot%202026-11-20%20210138.png",
+      "/projects/Screenshot%202026-11-20%20210155.png",
+    ],
     desc: "Dashboard interaktif segmentasi produk dan customer menggunakan RFM Analysis, K-Means clustering, dan analisis pola pembelian dengan Apriori.",
     tags: ["Python", "K-Means", "RFM", "Apriori"],
   },
@@ -123,9 +144,6 @@ const stagger = {
   visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
 };
 
-/* =========================================================
-   LOADING SCREEN
-   ========================================================= */
 function LoadingScreen({ onComplete }) {
   const [progress, setProgress] = useState(0);
 
@@ -192,9 +210,6 @@ function LoadingScreen({ onComplete }) {
   );
 }
 
-/* =========================================================
-   WELCOME TRANSITION
-   ========================================================= */
 function WelcomeTransition({ onComplete }) {
   useEffect(() => {
     const timer = setTimeout(onComplete, 2200);
@@ -243,9 +258,6 @@ function WelcomeTransition({ onComplete }) {
   );
 }
 
-/* =========================================================
-   MAIN APP
-   ========================================================= */
 export default function App() {
   const [activeId, setActiveId] = useState("services");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -315,7 +327,6 @@ export default function App() {
         className="min-h-screen font-sans text-slate-800 selection:bg-blue-200 overflow-x-hidden"
         style={{ background: "linear-gradient(160deg, #BFDBFE 0%, #DBEAFE 20%, #EFF6FF 50%, #FFFFFF 100%)" }}
       >
-        {/* NAVBAR */}
         <header className="sticky top-0 z-50 backdrop-blur-md bg-white/60 border-b border-blue-100/60">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 py-5 flex items-center justify-between">
             <button onClick={() => scrollTo("hero")} className="flex items-center gap-2 group">
@@ -355,7 +366,6 @@ export default function App() {
           )}
         </header>
 
-        {/* HERO */}
         <section id="hero" className="relative max-w-7xl mx-auto px-6 sm:px-10 pt-16 pb-24 md:pt-20 md:pb-32 scroll-mt-20">
           <svg className="hidden md:block absolute -bottom-6 left-0 w-64 h-64 text-blue-400/40 -z-0" viewBox="0 0 200 200" fill="none">
             <motion.path initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, ease: "easeInOut" }} d="M 20 180 C 20 100, 80 60, 140 100 C 180 130, 160 180, 120 180" stroke="currentColor" strokeWidth="1.5" />
@@ -443,7 +453,6 @@ export default function App() {
           </motion.div>
         </section>
 
-        {/* SERVICES */}
         <section id="services" className="relative max-w-7xl mx-auto px-6 sm:px-10 py-24 scroll-mt-20">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={fadeInUp} className="mb-14">
             <p className="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-widest">Services</p>
@@ -474,7 +483,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* PROJECTS SECTION */}
         <section id="portfolio" className="relative max-w-7xl mx-auto px-6 sm:px-10 py-24 scroll-mt-20">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={fadeInUp} className="mb-14">
             <p className="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-widest">Portfolio</p>
@@ -501,6 +509,8 @@ export default function App() {
                 }`}
               >
                 <div className="absolute top-0 left-0 w-full h-1.5 rounded-t-3xl bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {p.images?.length > 0 && <ImageGallery images={p.images} title={p.title} />}
 
                 <div>
                   <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -581,7 +591,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* ABOUT / SKILLS */}
         <section id="about" className="relative max-w-7xl mx-auto px-6 sm:px-10 py-24 scroll-mt-20">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={fadeInUp} className="mb-14">
             <p className="text-sm font-semibold text-blue-600 mb-3 uppercase tracking-widest">About</p>
@@ -613,7 +622,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* CONTACT */}
         <footer id="contact" className="relative max-w-7xl mx-auto px-6 sm:px-10 py-24 scroll-mt-20">
           <motion.div
             initial="hidden"

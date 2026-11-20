@@ -34,7 +34,7 @@ const projects = [
       "/projects/Screenshot%202026-11-20%20204237.png",
       "/projects/Screenshot%202026-11-20%20204253.png",
       "/projects/Screenshot%202026-11-20%20204351.png",
-      "portofolio-iqbal/public/projects/Screenshot 2026-11-20 203007.png",
+      "/projects/Screenshot%202026-11-20%20204217.png",
     ],
     desc: "Platform monitoring distributor pelumas end-to-end yang memproses 17.588 transaksi riil (730 hari) dengan machine learning, computer vision, dan real-time notification dalam satu aplikasi.",
     tags: ["FastAPI", "React 18", "PostgreSQL", "TensorFlow", "EasyOCR", "WebSocket", "JWT"],

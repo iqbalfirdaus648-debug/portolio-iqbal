@@ -25,26 +25,23 @@ const services = [
 
 const projects = [
   {
-    title: "Pertamina Distributor Monitoring System",
-    org: "AI-Powered Sales Intelligence Platform | Solo Developer · 2025 – 2026",
+    title: "PT Duta Buana Perkasa (DBP) — Sistem Monitoring & Forecasting Penjualan",
+    org: "Distributor Resmi Pertamina | FastAPI, React, PostgreSQL, PyTorch, Ollama, ChromaDB",
     featured: true,
     images: [
       "/projects/Screenshot%202026-11-20%20204154.png",
       "/projects/Screenshot%202026-11-20%20204205.png",
       "/projects/Screenshot%202026-11-20%20204237.png",
       "/projects/Screenshot%202026-11-20%20204253.png",
-      "/projects/Screenshot%202026-11-20%20204351.png",
-      "/projects/Screenshot%202026-11-20%20204217.png",
+      "/projects/Screenshot%202026-11-24%20140140.png",
     ],
-    desc: "Platform monitoring distributor pelumas end-to-end yang memproses 17.588 transaksi riil (730 hari) dengan machine learning, computer vision, dan real-time notification dalam satu aplikasi.",
-    tags: ["FastAPI", "React 18", "PostgreSQL", "TensorFlow", "EasyOCR", "WebSocket", "JWT"],
+    desc: "Membangun dashboard monitoring penjualan untuk admin DBP dengan forecasting LSTM, deteksi churn pelanggan, dan analisis produk slow-moving—menggantikan pelaporan manual di Excel.",
+    tags: ["FastAPI", "React", "PostgreSQL", "PyTorch", "Ollama", "ChromaDB", "EasyOCR", "JWT"],
     highlights: [
-      "Membangun platform monitoring distributor pelumas end-to-end dengan FastAPI + React + PostgreSQL, memproses 17.588 transaksi riil (730 hari)",
-      "Mengembangkan LSTM forecasting untuk prediksi penjualan dengan MAPE turun dari 70% → 46% via log transform, arsitektur 3-layer, dan Huber loss",
-      "Mengimplementasikan OCR product detection (EasyOCR + custom fuzzy scoring) untuk identifikasi produk dari foto label",
-      "Merancang Content-Based Filtering (TF-IDF + Cosine) untuk rekomendasi produk per pelanggan",
-      "Membangun dual authentication (JWT + API Key) dengan RBAC, bcrypt hashing, dan audit trail",
-      "Mengintegrasikan real-time WebSocket notification untuk multi-user sync",
+      "Membangun dashboard monitoring penjualan untuk admin DBP dengan forecasting LSTM, deteksi churn pelanggan, dan analisis produk slow-moving—menggantikan pelaporan manual di Excel.",
+      "Mengimplementasikan chatbot RAG lokal menggunakan Ollama (Qwen 3.5 9B) + ChromaDB + nomic-embed-text, memungkinkan query bahasa natural pada metrik bisnis tanpa biaya API dan data tetap privat di server.",
+      "Mengintegrasikan OCR (EasyOCR) untuk identifikasi label produk dari foto, dengan fuzzy matching untuk merek, SAE, dan tipe kemasan.",
+      "Menambahkan deteksi drift model, audit log, dan alert email otomatis untuk pemantauan bisnis proaktif."
     ],
   },
   {

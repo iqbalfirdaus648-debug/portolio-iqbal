@@ -34,6 +34,7 @@ const projects = [
       "/projects/Screenshot%202026-11-20%20204237.png",
       "/projects/Screenshot%202026-11-20%20204253.png",
       "/projects/Screenshot%202026-11-24%20140140.png",
+      "/projects/Screenshot%202026-11-20%20204351.png", 
     ],
     desc: "Membangun dashboard monitoring penjualan untuk admin DBP dengan forecasting LSTM, deteksi churn pelanggan, dan analisis produk slow-moving—menggantikan pelaporan manual di Excel.",
     tags: ["FastAPI", "React", "PostgreSQL", "PyTorch", "Ollama", "ChromaDB", "EasyOCR", "JWT"],
